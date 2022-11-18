@@ -1,4 +1,5 @@
 # 9-online-store
+In this project, I studied the interaction between the server and client parts of the application. The logic of their construction. User interaction logic, and build databases.
 
 # start app
 in console:
