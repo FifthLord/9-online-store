@@ -5,15 +5,21 @@ export default class DeviceStore {
       //_types - _brands тут це тимчасове рішення
       this._types = [
          { id: 1, name: 'Fridges' },
-         { id: 2, name: 'Phones' }
+         { id: 2, name: 'Phones' },
+         { id: 3, name: 'Laptops' },
+         { id: 4, name: 'TVs' },
       ]
       this._brands = [
          { id: 1, name: 'Samsung' },
-         { id: 2, name: 'Apple' }
+         { id: 2, name: 'Apple' },
       ]
       this._devices = [
-         { id: 1, name: "Iphone 12 pro", price: 25000, rating: 5, img: '../../../server/static/776bc134-e4d5-43f2-8909-6648bbade95a.jpg' }
+         { id: 1, name: "Iphone 12 pro", price: 25000, rating: 5, img: '../../../server/static/776bc134-e4d5-43f2-8909-6648bbade95a.jpg' },
+         { id: 1, name: "Iphone 12 pro", price: 25000, rating: 5, img: '../../../server/static/776bc134-e4d5-43f2-8909-6648bbade95a.jpg' },
+         { id: 1, name: "Iphone 12 pro", price: 25000, rating: 5, img: '../../../server/static/776bc134-e4d5-43f2-8909-6648bbade95a.jpg' },
+         { id: 1, name: "Iphone 12 pro", price: 25000, rating: 5, img: '../../../server/static/776bc134-e4d5-43f2-8909-6648bbade95a.jpg' },
       ]
+      this._selectedType = {}
       makeAutoObservable(this)
    }
 
@@ -29,6 +35,10 @@ export default class DeviceStore {
       this._devices = devices
    }
 
+   setSelectedType(type) {
+      this._selectedType = type
+   }
+
    get types() {
       return this._types
    }
@@ -39,6 +49,10 @@ export default class DeviceStore {
 
    get devices() {
       return this._devices
+   }
+
+   get selectedType() {
+      return this._selectedType
    }
 
 }
