@@ -14,7 +14,7 @@ const DeviceItem = ({ device }) => {
          >
             <Image width={150} height={150} src={device.img} />
             <div className=' md-1 d-flex justify-content-between align-items-center'>
-               <div>Item</div>
+               <div>DeviceItem</div>
                <div className='d-flex align-items-center'>
                   <div>{device.rating}</div>
                   <Image width={18} height={18} src={star} />
