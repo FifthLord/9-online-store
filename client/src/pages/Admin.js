@@ -1,10 +1,13 @@
 import React from 'react';
+import { Button, Container } from 'react-bootstrap';
 
 const Admin = () => {
    return (
-      <div>
-         Admin
-      </div>
+      <Container className='d-flex flex-column'>
+         <Button>Додати тип</Button>
+         <Button>Додати бренд</Button>
+         <Button>Додати пристрій</Button>
+      </Container>
    );
 };
 
