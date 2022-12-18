@@ -17,8 +17,7 @@ app.use(express.json())
 app.use(express.static(path.resolve(__dirname, 'static')))
 app.use(fileUpload({}))
 app.use('/api', router)
-let cors = require("cors");
-app.use(cors());
+app.use(cors());//спроба пофіксити помилку з axios
 
 //*обробник помилок повинен бути завжди останнім в списку middleware
 app.use(errorHandler)
