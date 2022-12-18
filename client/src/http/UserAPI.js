@@ -11,6 +11,6 @@ export const login = async (email, password) => {
 }
 
 export const check = async () => {
-   const response = await $host.post('api/auth/registration')
+   const response = await $host.post('api/auth/registration',)
    return response
 }
