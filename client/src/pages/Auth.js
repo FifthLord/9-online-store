@@ -17,7 +17,6 @@ const Auth = () => {
          const response = await registration(email, password)
          console.log(response);
       }
-
    }
 
    return (
@@ -30,7 +29,7 @@ const Auth = () => {
             <Form className='d-flex flex-column'>
                <Form.Control
                   className='mt-3'
-                  placeholder='Ввудіть ваш email...'
+                  placeholder='Введіть ваш email...'
                   value={email}
                   onChange={e => setEmail(e.target.value)}
                />
