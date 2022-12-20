@@ -24,7 +24,7 @@ const NavBar = observer(() => {
                      className="ml-2"
                      variant={"outline-light"}
                      onClick={() => navigate(LOGIN_ROUTE)}
-                  >Увійти</Button>
+                  >Вийти</Button>
                </Nav>
                :
                <Nav className="ml-auto" style={{ color: 'white' }}>
