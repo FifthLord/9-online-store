@@ -19,9 +19,10 @@ const NavBar = observer(() => {
                   <Button
                      variant={"outline-light"}
                      onClick={() => navigate(ADMIN_ROUTE)}
+                     className="m-1"
                   >Адмін панель</Button>
                   <Button
-                     className="ml-2"
+                     className="m-1"
                      variant={"outline-light"}
                      onClick={() => navigate(LOGIN_ROUTE)}
                   >Вийти</Button>
