@@ -2,7 +2,7 @@ import { makeAutoObservable } from 'mobx';
 
 export default class UserStore {
    constructor() {
-      this._isAuth = true
+      this._isAuth = true //це значення повинно бути false в робочій версії
       this._user = {}
       makeAutoObservable(this)
    }
