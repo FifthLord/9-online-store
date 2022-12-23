@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from "react-router-dom"
-import { Button, Card, Container, Form, Row } from 'react-bootstrap';
+import { Button, Card, Container, Form } from 'react-bootstrap';
 import { NavLink, useLocation } from 'react-router-dom';
 import { login, registration } from '../http/UserAPI';
 import { LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from '../utils/consts';
@@ -23,7 +23,7 @@ const Auth = observer(() => {
          } else {
             data = await registration(email, password)
          }
-         user.setUser(user)
+         user.setUser(data)
          user.setIsAuth(true)
          navigate(SHOP_ROUTE)
       } catch (error) {
