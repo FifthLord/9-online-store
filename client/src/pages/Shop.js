@@ -5,7 +5,7 @@ import DeviceList from '../components/DeviceList';
 import TypeBar from '../components/TypeBar';
 import { observer } from "mobx-react-lite"
 import { Context } from '../index';
-import { fetchBrands, fetchTypes } from '../http/deviceAPI';
+import { fetchBrands, fetchDevices, fetchTypes } from '../http/deviceAPI';
 
 const Shop = observer(() => {
    const { device } = useContext(Context);
@@ -13,6 +13,7 @@ const Shop = observer(() => {
    useEffect(() => {
       fetchTypes().then(data => device.setTypes(data))
       fetchBrands().then(data => device.setBrands(data))
+      fetchDevices().then(data => device.setDevices(data.rows))
    }, [])
 
    return (
