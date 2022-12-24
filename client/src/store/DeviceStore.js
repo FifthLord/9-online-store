@@ -4,12 +4,7 @@ export default class DeviceStore {
    constructor() {
       //_types - _brands тут це тимчасове рішення
       this._types = []
-      this._brands = [
-         { id: 1, name: 'Samsung' },
-         { id: 2, name: 'Apple' },
-         { id: 3, name: 'Lenovo' },
-         { id: 4, name: 'Asus' },
-      ]
+      this._brands = []
       this._devices = [
          { id: 1, name: "Iphone 12 pro", price: 25000, rating: 5, img: '../../../server/static/776bc134-e4d5-43f2-8909-6648bbade95a.jpg' },
          { id: 2, name: "Iphone 12 pro", price: 25000, rating: 5, img: '../../../server/static/776bc134-e4d5-43f2-8909-6648bbade95a.jpg' },
