@@ -22,9 +22,16 @@ const CreateDevice = observer(({ show, onHide }) => {
    const removeInfo = (number) => {
       setInfo(info.filter(i => i.number !== number))
    }
+   const changeInfo = (key, value, number) => {
+      setInfo(info.map(i => i.number === number ? { ...i, [key]: value } : i))
+   }
 
    const selectFile = e => {
       setFile(e.target.files[0]);
+   }
+
+   const addDevice = () => {
+
    }
 
    return (
@@ -86,12 +93,16 @@ const CreateDevice = observer(({ show, onHide }) => {
                   <Row className='mt-4' key={i.number}>
                      <Col md={4}>
                         <Form.Control
-                           placeholder="Введіть назву пристрою"
+                           value={i.title}
+                           onChange={(e) => changeInfo('title', e.target.value, i.number)}
+                           placeholder="Введіть назву властивості"
                         />
                      </Col>
                      <Col md={4}>
                         <Form.Control
-                           placeholder="Введіть опис пристрою"
+                           value={i.description}
+                           onChange={(e) => changeInfo('description', e.target.value, i.number)}
+                           placeholder="Введіть опис властивості"
                         />
                      </Col>
                      <Col md={4}>
@@ -104,12 +115,8 @@ const CreateDevice = observer(({ show, onHide }) => {
             </Form>
          </Modal.Body>
          <Modal.Footer>
-            <Button variant="outline-danger" onClick={onHide}>
-               Закрити
-            </Button>
-            <Button variant="outline-success" onClick={onHide}>
-               Додати пристрій
-            </Button>
+            <Button variant="outline-danger" onClick={onHide}>Закрити</Button>
+            <Button variant="outline-success" onClick={addDevice}>Додати пристрій</Button>
          </Modal.Footer>
       </Modal>
    );
