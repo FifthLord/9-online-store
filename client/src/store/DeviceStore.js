@@ -55,10 +55,12 @@ export default class DeviceStore {
    }
 
    get selectedType() {
+      this.setPage(1)
       return this._selectedType
    }
 
    get selectedBrand() {
+      this.setPage(1)
       return this._selectedBrand
    }
 
